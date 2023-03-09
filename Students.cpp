@@ -36,6 +36,22 @@ void getData(Students &student){
     }
 }
 
+// display the detail of the student
+void printStudent(Students &student){
+  cout << "Student's registration number: " << student.regno << endl;
+  cout << "Student's course id: " << student.courseid << endl;
+  cout << "Student's first name: " << student.firstname << endl;
+  cout << "Student's surname: " << student.surname << endl;
+  cout << "Student's address: " << student.address << endl;
+  cout << "Student's units registered: \n";
+    for (int i = 0; i < UNITS_REGISTERED; i++) {
+      for (int j = 0; j < UNITS_MARKS; j++) {
+        cout << student.unitsData[i][j] << "\n ";
+      }
+      cout << endl;
+    }
+}
+
 int main (){
   return 0;
 }
